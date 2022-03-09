@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t jurandirjcg/dp-alpine:latest .'
+        sh 'docker build -t jurandirjcg/dp-alpine-branch1:latest .'
       }
     }
     stage('Login') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push jurandirjcg/dp-alpine:latest'
+        sh 'docker push jurandirjcg/dp-alpine-branch1:latest'
       }
     }
   }
